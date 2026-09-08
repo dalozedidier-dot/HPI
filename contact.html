@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Contact — HPI Talents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>HPI Talents<small>by AFM Développement</small></span>
+      </a>
+            <nav class="nav-links">
+        <a  href="index.html">Accueil</a>
+        <a  href="comprendre.html">Comprendre</a>
+        <a  href="bilan.html">Bilan</a>
+        <a  href="formations.html">Formations</a>
+        <a  href="entreprises.html">Entreprises</a>
+        <a  href="reseau.html">Réseau</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <span class="lang"><b>FR</b> · EN</span>
+        <a class="btn btn-gold" href="contact.html">Prendre rendez-vous</a>
+      </div>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap page-hero">
+      <p class="kicker">Contact</p>
+      <h1>Dites-nous d’où vous parlez.</h1>
+      <p class="lead">Personne, professionnel ou organisation : un message suffit. Ce formulaire est un prototype — il n’envoie pas encore le mail.</p>
+    </section>
+
+    <section class="wrap section two-col">
+      <form class="form contact-form panel">
+        <div class="form-row">
+          <div>
+            <label for="prenom">Prénom</label>
+            <input id="prenom" name="prenom" required placeholder="Votre prénom" />
+          </div>
+          <div>
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" required placeholder="Votre nom" />
+          </div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="vous@email.com" />
+        </div>
+        <div>
+          <label for="profil">Vous êtes</label>
+          <select id="profil" name="profil">
+            <option>Adulte en questionnement HPI</option>
+            <option>Professionnel de l’accompagnement</option>
+            <option>Organisation / RH / direction</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div>
+          <label for="sujet">Sujet</label>
+          <select id="sujet" name="sujet">
+            <option>Bilan HPI sans test de QI</option>
+            <option>Formation / campus digital</option>
+            <option>Master Pro Gifted</option>
+            <option>Consulting entreprise</option>
+            <option>Conférence / presse</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Quelques lignes suffisent."></textarea>
+        </div>
+        <button class="btn btn-gold" type="submit">Envoyer le message</button>
+      </form>
+      <div class="form-success panel">Merci. Dans la version finale, ce message arrivera à l’équipe HPI Talents. Pour l’instant, écrivez-nous à contact@hpitalents.com.</div>
+
+      <aside>
+        <div class="panel">
+          <p class="kicker">Coordonnées</p>
+          <h3>HPI Talents by AFM Développement</h3>
+          <p style="margin:12px 0;color:var(--muted)">115, avenue Jean Jaurès<br>33600 Pessac — France</p>
+          <p><a href="mailto:contact@hpitalents.com">contact@hpitalents.com</a></p>
+          <p><a href="mailto:info@hpitalents.com">info@hpitalents.com</a></p>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <p class="kicker">Délai</p>
+          <p>Les demandes sont lues par l’équipe. Indiquez si votre besoin est personnel, pédagogique ou organisationnel : l’orientation n’en sera que plus rapide.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p class="foot-title">HPI Talents — AFM Développement</p>
+      <div class="foot">
+        <div>
+          <div class="foot-block">
+            <h4>Nous suivre</h4>
+            <div class="icons">
+              <a class="icon" href="https://www.facebook.com/hpitalents" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2c0-.6.4-1 1-1z"/></svg>
+              </a>
+              <a class="icon" href="https://www.youtube.com/@fabricemicheau" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg viewBox="0 0 24 24"><path d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6zM9.8 15.5v-6.6l6.2 3.3-6.2 3.3z"/></svg>
+              </a>
+              <a class="icon" href="https://fr.linkedin.com/in/fabricemicheau" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M6.5 9H3.7v11.2h2.8V9zM5.1 3.8C4.1 3.8 3.3 4.6 3.3 5.6s.8 1.8 1.8 1.8 1.8-.8 1.8-1.8-.8-1.8-1.8-1.8zM20.3 13.1c0-3.1-1.6-4.5-3.8-4.5-1.7 0-2.5.9-3 1.6V9H10.7c0 1.8 0 11.2 0 11.2h2.8v-6.3c0-.3 0-.7.1-1 .3-.7.9-1.5 2-1.5 1.4 0 2 1.1 2 2.6v6.2h2.8V13.1z"/></svg>
+              </a>
+              <a class="icon" href="https://www.instagram.com/fabricemicheau/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 1.8H7A2.2 2.2 0 0 0 4.8 7v10A2.2 2.2 0 0 0 7 19.2h10A2.2 2.2 0 0 0 19.2 17V7A2.2 2.2 0 0 0 17 4.8zM12 8.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 1.6A2.2 2.2 0 1 0 14.2 12 2.2 2.2 0 0 0 12 9.8zM17.6 7.1a.9.9 0 1 1-.9-.9.9.9 0 0 1 .9.9z"/></svg>
+              </a>
+              <a class="icon" href="https://www.tiktok.com/@fabricemicheau" target="_blank" rel="noopener" aria-label="TikTok">
+                <svg viewBox="0 0 24 24"><path d="M14.5 3c.3 2.3 1.6 3.8 3.8 4.1v2.4c-1.3 0-2.5-.4-3.6-1.1v6.3A6.3 6.3 0 1 1 9.2 8.5v2.6a3.7 3.7 0 1 0 2.6 3.5V3h2.7z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="foot-block">
+            <h4>Nos podcasts</h4>
+            <div class="icons">
+              <a class="icon" href="https://www.youtube.com/playlist?list=PLudpJOwP1QAdIll7T62ykbNtXu2C-GSbO" target="_blank" rel="noopener" aria-label="YouTube Podcasts">
+                <svg viewBox="0 0 24 24"><path d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6zM9.8 15.5v-6.6l6.2 3.3-6.2 3.3z"/></svg>
+              </a>
+              <a class="icon" href="https://www.deezer.com/search/Fabrice%20Micheau" target="_blank" rel="noopener" aria-label="Deezer">
+                <svg viewBox="0 0 24 24"><path d="M2 14h3v6H2zm4.2-3h3v9h-3zm4.2-3h3v12h-3zM14.6 7h3v12h-3zM19 10h3v9h-3z"/></svg>
+              </a>
+              <a class="icon" href="https://open.spotify.com/search/Fabrice%20Micheau" target="_blank" rel="noopener" aria-label="Spotify">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.6 14.4a.7.7 0 0 1-1 .2c-2.6-1.6-5.9-2-9.8-1.1a.7.7 0 1 1-.3-1.4c4.2-1 7.8-.5 10.7 1.3a.7.7 0 0 1 .4 1zm1.2-2.7a.9.9 0 0 1-1.2.3c-3-1.8-7.5-2.4-11-1.3a.9.9 0 0 1-.5-1.7c4-.1 9 .6 12.4 2.7a.9.9 0 0 1 .3 1zm.1-2.8C14.4 8.8 8.7 8.6 5.4 9.6a1 1 0 0 1-.6-2c3.8-1.1 10.2-.9 14.3 1.6a1 1 0 1 1-1.1 1.7z"/></svg>
+              </a>
+              <a class="icon" href="https://music.amazon.fr/search/Fabrice%20Micheau" target="_blank" rel="noopener" aria-label="Amazon Music">
+                <svg viewBox="0 0 24 24"><path d="M14.4 12.7c-2.3 1.7-5.6 2.6-8.5 2.6-4 0-7.6-1.5-10.3-4 .2.3 2.6 4.4 8.2 6.3 5.7 1.9 8.5-1.4 8.7-1.7-.1 0-2.6.8-7.4.2 4.5-1 8.4-3.2 10.2-5.3l-1-.1c-.6 1-1.4 1.5-1.9 2zm2.7-2.1c0-1.9-1.1-2.8-3.3-3.4l-1.8-.5c-1.3-.3-1.8-.7-1.8-1.3s.6-1.1 1.8-1.1c1.3 0 2 .4 2.5 1.2l2-1.1C15.8 3.3 14.5 2.8 12.3 2.8c-2.4 0-4 1.3-4 3.3 0 1.6 1.1 2.6 3.4 3.2l1.8.5c1.2.3 1.8.7 1.8 1.4s-.8 1.2-1.9 1.2c-1.6 0-2.5-.5-3.2-1.6l-2.1 1.1c.8 1.7 2.6 2.6 5.2 2.6 2.6.1 4.3-1.3 4.3-3.4z"/></svg>
+              </a>
+              <a class="icon" href="https://podcasts.apple.com/search?term=Fabrice%20Micheau%20HPI" target="_blank" rel="noopener" aria-label="Apple Podcasts">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.2-1.7.4-3.1.4-3.1s-.3-.6-.3-1.6 1.2-2.6 1.2-2.6-.2-1 .2-1.8c1.2-2.2 2.7-.4 2.7-.4s1.4-1.8 2.8.3c.4.6.3 1.6.3 1.6S17.4 14 17.4 15s-.3 1.6-.3 1.6.2 1.4.4 3.1A10 10 0 0 0 12 2zm0 5.2a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4zm-1.4 12.6.4-3.1h2l.4 3.1a7.7 7.7 0 0 1-2.8 0z"/></svg>
+              </a>
+              <a class="icon" href="https://www.hpitalents.com/fr/pages/24-conferences-hpi/" target="_blank" rel="noopener" aria-label="Conférences et podcasts">
+                <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-6 6v3a3 3 0 0 0 3 3h1V11H7V9a5 5 0 0 1 10 0v2h-3v4h1a3 3 0 0 0 3-3V9a6 6 0 0 0-6-6zm-2 16h4v2h-4z"/></svg>
+              </a>
+              <a class="icon" href="https://www.hpitalents.com/fr/pages/24-conferences-hpi/" target="_blank" rel="noopener" aria-label="Replay podcast">
+                <svg viewBox="0 0 24 24"><path d="M4 10v4h4l5 5V5L8 10H4zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="foot-contact">
+          <p>
+            <svg viewBox="0 0 24 24"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke-width="1.7"/></svg>
+            115, Avenue Jean Jaurès, 33600 Pessac — France
+          </p>
+          <a href="mailto:contact@hpitalents.com">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" stroke-width="1.7"/><path d="M4 7l8 6 8-6" stroke-width="1.7"/></svg>
+            contact@hpitalents.com
+          </a>
+        </div>
+      </div>
+      <nav class="legal-nav">
+        <a href="comprendre.html">À propos</a>
+        <a href="https://www.hpitalents.com/fr/pages/23-mentions-legales/" target="_blank" rel="noopener">Mentions légales</a>
+        <a href="https://www.hpitalents.com/fr/pages/21-politique-des-cookies/" target="_blank" rel="noopener">Cookies</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="legal">
+        <span>© 2026 | HPI Talents, tous droits réservés</span>
+        <span>TVA : FR48422127910</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
