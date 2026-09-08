@@ -1177,3 +1177,56 @@ header.site .nav { min-height: 72px; }
   .news-thumb { height: 190px; }
   .news-list-copy { padding: 20px; }
 }
+
+
+/* V19: complete conferences hub using the V9 editorial system. */
+.conference-hub { padding-top: 50px; }
+.conference-section { margin: 0 0 72px; }
+.conference-section:last-child { margin-bottom: 0; }
+.conference-section-head { margin: 0 0 26px; max-width: 60rem; }
+.conference-section-head h2 { margin: 7px 0 10px; font-size: clamp(2rem, 3.3vw, 3rem); }
+.conference-channel, .conference-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  color: var(--plum);
+  font-weight: 500;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 3px;
+}
+.conference-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
+.conference-grid-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.conference-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: 0 10px 28px rgba(35, 25, 43, .05);
+}
+.conference-card.featured { display: grid; grid-template-columns: minmax(170px, .7fr) 1.3fr; }
+.conference-thumb {
+  min-height: 190px;
+  background: linear-gradient(145deg, #f3ecdf, #fffdf9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.conference-thumb img { display: block; width: 100%; height: 100%; min-height: 190px; object-fit: cover; }
+.conference-thumb.logo-thumb img { object-fit: contain; padding: 28px; max-height: 250px; }
+.conference-thumb.portrait-thumb img { object-position: center top; }
+.conference-copy { padding: 22px 22px 24px; }
+.conference-copy h3 { font-size: 1.34rem; margin: 6px 0 11px; }
+.conference-copy p { color: var(--muted); line-height: 1.62; }
+.conference-year { color: var(--mauve-deep) !important; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px; }
+@media (max-width: 1100px) {
+  .conference-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .conference-card.featured { grid-template-columns: 1fr; }
+  .conference-thumb.logo-thumb img { max-height: 220px; }
+}
+@media (max-width: 700px) {
+  .conference-grid, .conference-grid-featured { grid-template-columns: 1fr; }
+  .conference-section { margin-bottom: 54px; }
+  .conference-copy { padding: 20px; }
+}
