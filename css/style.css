@@ -1361,3 +1361,17 @@ header.site .nav { min-height: 72px; }
   .reference-logo:nth-child(2n),
   .reference-logo:nth-last-child(-n+6) { border: 0; min-height: 96px; }
 }
+
+
+/* V23: internal book detail page. */
+.book-detail-feature { margin-bottom: 56px; }
+.book-facts { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 8px; }
+.book-facts span { display:inline-flex; align-items:baseline; gap:6px; padding:10px 13px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.56); color:var(--muted); font-size:.82rem; }
+.book-facts strong { color:var(--plum); font-size:1rem; }
+.book-detail-actions { margin-top:24px; }
+.book-detail-content { margin:60px 0; }
+.book-detail-panel h3 { margin:10px 0 16px; }
+.book-detail-cta { margin-top:48px; }
+@media (max-width: 820px) {
+  .book-detail-content { margin:42px 0; }
+}
