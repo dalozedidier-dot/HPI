@@ -1513,3 +1513,44 @@ header.site .nav { min-height: 72px; }
 @media (max-width: 560px) {
   .person-avatar { width:76px; height:76px; flex-basis:76px; }
 }
+
+
+/* V28: MASTER PRO GIFTED complete profiles and programme details. */
+.master-intro { max-width: 980px; }
+.master-highlights {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin:26px 0 34px;
+}
+.master-highlights > div {
+  padding:18px 16px;
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--line);
+}
+.master-highlights strong {
+  display:block;
+  font-family:var(--serif);
+  color:var(--plum);
+  font-size:1.55rem;
+  font-weight:500;
+}
+.master-highlights span { display:block; margin-top:4px; color:var(--muted); font-size:.84rem; }
+.certified-grid-detailed { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin-top:30px; }
+.certified-card-detailed { display:grid; grid-template-columns:170px 1fr; align-items:stretch; background:linear-gradient(145deg,#fffdfa,#f6efe6); }
+.certified-card-detailed img { width:100%; height:100%; min-height:260px; object-fit:cover; object-position:center top; }
+.certified-card-detailed > div { padding:24px; }
+.certified-card-detailed h3 { font-family:var(--serif); font-size:1.55rem; color:var(--plum); }
+.certified-card-detailed p { font-size:.9rem; line-height:1.65; }
+.certified-contact { display:flex; flex-direction:column; gap:7px; margin-top:16px; }
+.certified-contact a { color:var(--plum); font-size:.82rem; overflow-wrap:anywhere; }
+.certified-contact a:hover { color:var(--mauve-deep); text-decoration:underline; }
+@media (max-width: 1000px) {
+  .master-highlights { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .certified-grid-detailed { grid-template-columns:1fr; }
+}
+@media (max-width: 600px) {
+  .master-highlights { grid-template-columns:1fr 1fr; }
+  .certified-card-detailed { grid-template-columns:1fr; }
+  .certified-card-detailed img { height:320px; min-height:0; }
+}
