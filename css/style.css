@@ -135,6 +135,7 @@ header.site {
   background: var(--image-beige);
   border-bottom: 1px solid var(--image-beige-line);
   overflow: hidden;
+  align-items: stretch;
 }
 .hero-left {
   display: flex;
@@ -210,18 +211,21 @@ header.site {
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-art {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  align-self: stretch;
   background: var(--image-beige);
   min-height: min(90vh, 900px);
   padding: 0;
+  overflow: hidden;
 }
 .hero-art img {
   display: block;
   width: 100%;
-  height: min(90vh, 900px);
+  height: 100%;
   object-fit: contain;
-  object-position: center center;
+  object-position: center bottom;
+  margin: 0;
 }
 
 .split {
@@ -465,8 +469,8 @@ footer.site {
   .hero-left { width: auto; min-height: 0; }
   .hero-left::before, .hero-left::after { display: none; }
   .hero-copy { padding: 36px 24px 28px; width: auto; }
-  .hero-art { display: flex; min-height: 0; }
-  .hero-art img { width: 100%; height: auto; }
+  .hero-art { display: flex; min-height: 0; align-items: flex-end; }
+  .hero-art img { width: 100%; height: auto; display: block; margin: 0; }
 
   .cta-band { padding: 32px; }
 }
@@ -881,4 +885,40 @@ header.site .nav { min-height: 72px; }
   .stats-five { grid-template-columns: 1fr; }
   .stats-five .stat { border-right: 0; border-bottom: 1px solid rgba(212, 188, 138, .18); }
   .stats-five .stat:last-child { border-bottom: 0; }
+}
+
+
+/* V13: keep the hero artwork anchored to its lower boundary and use the exact stat pictograms supplied by the user. */
+@media (min-width: 981px) {
+  .hero-art {
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .hero-art img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    flex: 0 0 auto;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+.stats-five .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stat-icon-img {
+  display: block;
+  height: 72px;
+  width: auto;
+  max-width: 105px;
+  object-fit: contain;
+  margin: 0 auto 4px;
+}
+@media (max-width: 980px) {
+  .stat-icon-img { height: 64px; }
 }
