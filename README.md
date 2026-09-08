@@ -23,3 +23,8 @@ Les corrections portent sur le contenu et l'arborescence, pas sur une nouvelle d
 ## Référence de contenu
 
 https://www.hpitalents.com/
+
+
+## V12
+
+L'accueil réintègre les blocs publics manquants du site de référence tout en conservant le design V9 : 5 chiffres clés, conférences, livre, réseaux, actualités et certifications.
