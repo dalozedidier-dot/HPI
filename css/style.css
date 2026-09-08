@@ -569,21 +569,8 @@ header.open .burger span:nth-child(3) { transform: translateY(-5.5px) rotate(-45
 .neural-nodes circle:nth-child(3n) { animation-delay: -3.2s; }
 .brain-energy * { animation-play-state: paused; }
 .brain-running .brain-energy { opacity: 1; }
-.brain-running:not(.brain-paused):not(.brain-offscreen) .brain-energy * { animation-play-state: running; }
-.brain-toggle {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  padding: 9px 13px;
-  border: 1px solid rgba(212,188,138,.5);
-  border-radius: 24px;
-  background: rgba(44,35,54,.9);
-  color: var(--gold-2);
-  font-size: 12px;
-  cursor: pointer;
-}
-.brain-toggle:hover { background: var(--plum); }
-.brain-toggle:focus-visible { outline-color: var(--gold); }
+.brain-running:not(.brain-offscreen) .brain-energy * { animation-play-state: running; }
+
 .hero-copy > :nth-child(6) { animation-delay: 420ms; }
 @keyframes neural-flow { to { stroke-dashoffset: 0; } }
 @keyframes neural-pulse {
@@ -598,7 +585,7 @@ header.open .burger span:nth-child(3) { transform: translateY(-5.5px) rotate(-45
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
   .btn:hover { transform: none; }
-  .brain-energy, .brain-toggle { display: none; }
+  .brain-energy { display: none; }
 }
 
 

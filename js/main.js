@@ -75,21 +75,14 @@ if (form) {
   });
 }
 
-// Keep neural activity aligned with the static illustration, with a pause control.
+// Animate automatically while visible, respecting reduced motion.
 const brain = document.querySelector('.hero-art');
-const brainToggle = document.querySelector('.brain-toggle');
-if (brain && brainToggle) {
+if (brain) {
   const updateBrainMotion = () => {
     brain.classList.toggle('brain-running', !reducedMotion.matches);
-    brainToggle.hidden = reducedMotion.matches;
   };
   updateBrainMotion();
   reducedMotion.addEventListener('change', updateBrainMotion);
-  brainToggle.addEventListener('click', () => {
-    const paused = brain.classList.toggle('brain-paused');
-    brainToggle.setAttribute('aria-pressed', String(paused));
-    brainToggle.textContent = paused ? 'Reprendre l’animation' : 'Mettre l’animation en pause';
-  });
   let brainInView = true;
   const updateBrainVisibility = () => {
     brain.classList.toggle('brain-offscreen', document.hidden || !brainInView);
