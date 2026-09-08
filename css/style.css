@@ -601,3 +601,121 @@ header.open .burger span:nth-child(3) { transform: translateY(-5.5px) rotate(-45
   .brain-energy, .brain-toggle { display: none; }
 }
 
+
+/* Fine line decoration shared by every page. */
+.hero-left { justify-content: flex-start; isolation: isolate; }
+.hero-copy {
+  width: min(620px, 84%);
+  margin-left: calc(8% + 28px);
+  padding: 64px 24px 64px 0;
+  position: relative;
+  z-index: 1;
+}
+.hero-left::after {
+  inset: 0;
+  width: auto;
+  height: auto;
+  background: url('../assets/hero-lines.svg') left center / 100% 100% no-repeat;
+  opacity: .7;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-left::before { pointer-events: none; }
+.audience, .step, .panel, .mind-item, .cta-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.audience::after, .step::after, .panel::after, .mind-item::after, .card::after, .cta-band::after {
+  content: '';
+  position: absolute;
+  width: 190px;
+  height: 114px;
+  bottom: 0;
+  right: 0;
+  border: 0;
+  border-radius: 0;
+  background: url('../assets/card-lines.svg') right bottom / contain no-repeat;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 350ms ease, transform 600ms var(--motion-ease);
+}
+.card { isolation: isolate; }
+.audience.dark::after, .card::after, .cta-band::after { filter: brightness(1.65) saturate(.5); }
+.audience::after { width: 220px; height: 132px; }
+.mind-item::after { width: 95px; height: 57px; opacity: .65; }
+.cta-band::after { width: 380px; height: 228px; opacity: .6; }
+.cta-band .btn { flex-shrink: 0; white-space: nowrap; }
+.step { padding-bottom: 36px; }
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  padding: 64px 38px 38px;
+  margin-top: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 54px;
+  bottom: 38px;
+  width: 1px;
+  background: linear-gradient(transparent, var(--mauve), var(--gold), transparent);
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 0;
+  background: url('../assets/page-lines.svg') right center / auto 100% no-repeat;
+  opacity: .6;
+}
+.page-hero h1 { max-width: 19ch; }
+.page-hero .lead { max-width: 48rem; }
+.section-head::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 1px;
+  margin: 24px auto 0;
+  background: linear-gradient(90deg, var(--gold), var(--mauve));
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .audience:hover::after, .card:hover::after, .step:hover::after, .mind-item:hover::after {
+    transform: translate(-4px, -3px);
+    opacity: .8;
+  }
+}
+@media (max-width: 980px) {
+  .hero-copy { width: 100%; margin-left: 0; padding: 44px 28px 48px; }
+  .hero-left::after { display: block; opacity: .35; }
+  .page-hero { padding: 36px 22px 30px; margin-top: 16px; }
+  .page-hero::before { top: 28px; bottom: 28px; }
+  .page-hero::after { opacity: .3; }
+  .cta-band::after { width: 240px; height: 144px; }
+}
+
+/* Render ornaments above the surface and below all card content. */
+:is(.audience, .card, .step, .panel, .mind-item, .cta-band) > * {
+  position: relative;
+  z-index: 1;
+}
+:is(.audience, .card, .step, .panel, .mind-item, .cta-band)::after {
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20120%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%239670aa%22%20stroke-width%3D%221.15%22%3E%3Cpath%20d%3D%22M20%20120C105%20118%2092%2035%20185%2042S265%2050%20320%204%22%2F%3E%3Cpath%20d%3D%22M62%20120C132%20108%20123%2057%20200%2064S284%2067%20320%2033%22%2F%3E%3Cpath%20d%3D%22M115%20120C163%2091%20202%20100%20247%2097S296%2088%20320%2068%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  width: min(72%, 280px);
+  height: 105px;
+  opacity: .65;
+  filter: none;
+}
+:is(.audience.dark, .card, .cta-band)::after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20120%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%23dfc99f%22%20stroke-width%3D%221.15%22%3E%3Cpath%20d%3D%22M20%20120C105%20118%2092%2035%20185%2042S265%2050%20320%204%22%2F%3E%3Cpath%20d%3D%22M62%20120C132%20108%20123%2057%20200%2064S284%2067%20320%2033%22%2F%3E%3Cpath%20d%3D%22M115%20120C163%2091%20202%20100%20247%2097S296%2088%20320%2068%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  opacity: .65;
+  filter: none;
+}
+.audience, .step { padding-bottom: 52px; }
+.card { padding-bottom: 52px; }
+.mind-item::after { width: 95px; height: 45px; opacity: .45; }
+.cta-band::after { width: min(48%, 420px); height: 158px; opacity: .5; }
