@@ -1,5 +1,5 @@
-# Notice
+# Maquette non officielle
 
-Ce dépôt contient une **maquette non officielle** de refonte du site HPI Talents, destinée à une présentation privée ou de démonstration.
+Cette version est une proposition de refonte graphique destinée à être présentée à HPI Talents. Elle n'est pas le site officiel et n'est pas autorisée à recevoir des demandes ou des données personnelles.
 
-Les marques, noms, textes, coordonnées, visuels et autres éléments liés à **HPI Talents**, **AFM Développement** ou à leurs représentants ne sont pas placés sous licence open source par ce dépôt et restent soumis aux droits de leurs titulaires respectifs.
+Les informations ont été vérifiées sur https://www.hpitalents.com/ le 8 septembre 2026. Les textes de la maquette sont des synthèses des pages publiques afin de conserver les informations importantes sans dupliquer intégralement le contenu éditorial.

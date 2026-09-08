@@ -1,46 +1,19 @@
-# HPI Talents — proposition de refonte
+# HPI Talents, proposition de refonte
 
-Prototype statique d'une proposition de refonte visuelle et éditoriale du site **HPI Talents**, préparé pour être présenté à **Fabrice Micheau**.
+Maquette statique destinée à GitHub Pages.
 
-> **Maquette non officielle.** Ce dépôt sert uniquement à la démonstration et à l'évaluation d'une piste de refonte. Il ne remplace pas le site officiel de HPI Talents / AFM Développement.
+## Ce qui a été corrigé
 
-## Contenu
+- architecture élargie pour couvrir le menu public actuel et toutes les rubriques visibles dans les captures fournies
+- données clés alignées sur le site officiel
+- suppression des formulations ajoutées sans source comme HPI Mindset
+- navigation complète avec menus déroulants, y compris les anciennes entrées encore visibles dans les captures
+- page Plan du site pour contrôler la couverture
+- page Sources officielles pour vérifier chaque groupe de contenus
+- aucun tiret cadratin ou demi-cadratin dans les fichiers texte
+- formulaire de contact neutralisé dans la maquette
+- noindex et robots.txt pour éviter toute confusion avec le site officiel
 
-- Accueil
-- Comprendre
-- Bilan
-- Formations
-- Entreprises
-- Réseau
-- Contact
-- Navigation responsive desktop / mobile
+## Référence
 
-Le site est volontairement simple : **HTML, CSS et JavaScript natifs**, sans framework ni étape de compilation.
-
-## Voir la maquette localement
-
-Ouvrir simplement `index.html` dans un navigateur, ou lancer un petit serveur local depuis le dossier du projet :
-
-```bash
-python -m http.server 8000
-```
-
-Puis ouvrir `http://localhost:8000`.
-
-## Publication avec GitHub Pages
-
-Le dépôt contient déjà un workflow GitHub Pages dans `.github/workflows/pages.yml`.
-
-1. Créer un dépôt GitHub, par exemple `hpitalents-refonte`.
-2. Ajouter le contenu de ce dossier à la racine du dépôt.
-3. Dans **Settings → Pages**, choisir **GitHub Actions** comme source de déploiement.
-4. Envoyer les fichiers sur la branche `main`.
-
-La maquette sera alors publiée à l'adresse GitHub Pages du dépôt.
-
-## Important
-
-- Le formulaire de contact est une **simulation visuelle** : aucune donnée n'est envoyée.
-- Les pages sont configurées en `noindex` et un `robots.txt` bloque l'indexation des moteurs de recherche.
-- Les noms, marques, textes, coordonnées et contenus liés à HPI Talents / AFM Développement restent la propriété de leurs titulaires respectifs.
-- Aucun fichier de licence open source n'est ajouté afin de ne pas attribuer par erreur une licence au contenu de la maquette.
+https://www.hpitalents.com/
