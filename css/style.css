@@ -1361,3 +1361,81 @@ header.site .nav { min-height: 72px; }
   .reference-logo:nth-child(2n),
   .reference-logo:nth-last-child(-n+6) { border: 0; min-height: 96px; }
 }
+
+/* Correction accueil : illustration Comprendre la douance + texte en deux colonnes. */
+.home-douance {
+  overflow: hidden;
+}
+
+.douance-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 410px) minmax(0, 1fr);
+  gap: clamp(38px, 5vw, 72px);
+  align-items: center;
+}
+
+.douance-visual {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.douance-visual img {
+  display: block;
+  width: min(100%, 410px);
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+}
+
+.douance-copy {
+  min-width: 0;
+  max-width: 720px;
+}
+
+.douance-copy h2 {
+  max-width: 18ch;
+  margin-bottom: 18px;
+}
+
+.douance-copy > p {
+  color: var(--muted);
+}
+
+.douance-highlight {
+  margin-top: 24px;
+  color: var(--plum) !important;
+}
+
+.douance-points {
+  margin: 16px 0 22px;
+  padding-left: 20px;
+}
+
+.douance-points li {
+  margin: 9px 0;
+}
+
+@media (max-width: 900px) {
+  .douance-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .douance-visual img {
+    width: min(82vw, 340px);
+    max-height: none;
+  }
+
+  .douance-copy {
+    max-width: none;
+  }
+
+  .douance-copy h2 {
+    max-width: none;
+  }
+}
