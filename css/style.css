@@ -1848,3 +1848,54 @@ header.site .nav { min-height: 72px; }
   width: 20px;
   height: 20px;
 }
+
+/* Footer exact icons from original site screenshot */
+.social-icons .icon,
+.podcast-icons .icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  flex: 0 0 38px;
+  background-image: url("../assets/icons/footer-sprite.svg");
+  background-size: 190px 114px;
+  background-repeat: no-repeat;
+  background-color: rgba(246, 241, 234, 0.07);
+  border: 1px solid rgba(212, 188, 138, 0.24);
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.social-icons .icon:hover,
+.podcast-icons .icon:hover {
+  background-color: rgba(212, 188, 138, 0.16);
+  border-color: rgba(212, 188, 138, 0.62);
+  transform: translateY(-2px);
+}
+
+/* Hide the previously injected SVG social glyphs: the exact old-site sprite is used instead. */
+.social-icons .brand-icon {
+  display: none !important;
+}
+
+/* Row 1 - social */
+.social-icons .icon[aria-label="Facebook"]  { background-position:    0px   0px; }
+.social-icons .icon[aria-label="YouTube"]   { background-position:  -38px   0px; }
+.social-icons .icon[aria-label="LinkedIn"]  { background-position:  -76px   0px; }
+.social-icons .icon[aria-label="Instagram"] { background-position: -114px   0px; }
+.social-icons .icon[aria-label="TikTok"]    { background-position: -152px   0px; }
+
+/* Row 2 - podcasts */
+.podcast-icons .icon[aria-label="YouTube Podcasts"] { background-position:    0px  -38px; }
+.podcast-icons .icon[aria-label="Deezer"]           { background-position:  -38px  -38px; }
+.podcast-icons .icon[aria-label="Spotify"]          { background-position:  -76px  -38px; }
+.podcast-icons .icon[aria-label="Amazon Music"]     { background-position: -114px  -38px; }
+.podcast-icons .icon[aria-label="Apple Podcasts"]   { background-position: -152px  -38px; }
+
+/* Row 3 - podcasts */
+.podcast-icons .icon[aria-label="Podcast Addict"] { background-position:    0px  -76px; }
+.podcast-icons .icon[aria-label="Overcast"]       { background-position:  -38px  -76px; }
+.podcast-icons .icon[aria-label="Castro"]         { background-position:  -76px  -76px; }
+.podcast-icons .icon[aria-label="Castbox"]        { background-position: -114px  -76px; }
+.podcast-icons .icon[aria-label="Pocket Casts"]   { background-position: -152px  -76px; }

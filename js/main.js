@@ -99,6 +99,19 @@ if (brain) {
 }
 
 
+
+// Ensure the podcast footer contains the YouTube entry shown on the original site.
+document.querySelectorAll(".podcast-icons").forEach((row) => {
+  if (row.querySelector('[aria-label="YouTube Podcasts"]')) return;
+  const link = document.createElement("a");
+  link.className = "icon";
+  link.href = "https://www.youtube.com/@fabricemicheau";
+  link.target = "_blank";
+  link.rel = "noopener";
+  link.setAttribute("aria-label", "YouTube Podcasts");
+  row.prepend(link);
+});
+
 // Footer social networks: replace placeholder letters with real brand icons.
 // The icons inherit the current HPI Talents gold from CSS, so the footer stays
 // consistent with the site's active palette.
