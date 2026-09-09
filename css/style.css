@@ -1031,39 +1031,15 @@ header.site .nav { min-height: 72px; }
 .book-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
 .book-card {
   min-width: 0;
-  height: 100%;
   padding: 22px 16px 20px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--paper);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.book-card .book-cover {
-  width: 100%;
-  min-height: 272px;
-  margin-bottom: 10px;
 }
 .book-card .book-cover img { height: 255px; box-shadow: 0 12px 28px rgba(36, 25, 45, .1); }
-.book-card h3 {
-  font-size: 1.2rem;
-  margin: 8px 0 8px;
-  min-height: 2.6em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.book-card p {
-  color: var(--muted);
-  font-size: .86rem;
-  min-height: 3.1em;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.book-card h3 { font-size: 1.2rem; margin: 18px 0 6px; }
+.book-card p { color: var(--muted); font-size: .86rem; }
 .network-banner {
   margin: 0 0 42px;
   overflow: hidden;
@@ -1585,7 +1561,7 @@ header.site .nav { min-height: 72px; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: auto;
+  margin-top: 14px;
   padding: 9px 15px;
   border: 1px solid rgba(42, 29, 49, .28);
   border-radius: 8px;
@@ -1848,3 +1824,78 @@ header.site .nav { min-height: 72px; }
   .news-article-nav { grid-template-columns: 1fr 1fr; gap: 20px; }
   .news-back { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
 }
+
+
+/* Footer social networks: real brand icons, current HPI Talents palette */
+.social-icons .icon {
+  background: rgba(246, 241, 234, 0.07);
+  color: var(--gold);
+  border: 1px solid rgba(212, 188, 138, 0.24);
+}
+.social-icons .icon:hover {
+  background: var(--gold);
+  color: var(--plum);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.social-icons .brand-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: currentColor;
+}
+.social-icons .icon[aria-label="YouTube"] .brand-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Footer exact icons from original site screenshot */
+.social-icons .icon,
+.podcast-icons .icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  flex: 0 0 38px;
+  background-image: url("../assets/icons/footer-sprite.svg");
+  background-size: 190px 114px;
+  background-repeat: no-repeat;
+  background-color: rgba(246, 241, 234, 0.07);
+  border: 1px solid rgba(212, 188, 138, 0.24);
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.social-icons .icon:hover,
+.podcast-icons .icon:hover {
+  background-color: rgba(212, 188, 138, 0.16);
+  border-color: rgba(212, 188, 138, 0.62);
+  transform: translateY(-2px);
+}
+
+/* Hide the previously injected SVG social glyphs: the exact old-site sprite is used instead. */
+.social-icons .brand-icon {
+  display: none !important;
+}
+
+/* Row 1 - social */
+.social-icons .icon[aria-label="Facebook"]  { background-position:    0px   0px; }
+.social-icons .icon[aria-label="YouTube"]   { background-position:  -38px   0px; }
+.social-icons .icon[aria-label="LinkedIn"]  { background-position:  -76px   0px; }
+.social-icons .icon[aria-label="Instagram"] { background-position: -114px   0px; }
+.social-icons .icon[aria-label="TikTok"]    { background-position: -152px   0px; }
+
+/* Row 2 - podcasts */
+.podcast-icons .icon[aria-label="YouTube Podcasts"] { background-position:    0px  -38px; }
+.podcast-icons .icon[aria-label="Deezer"]           { background-position:  -38px  -38px; }
+.podcast-icons .icon[aria-label="Spotify"]          { background-position:  -76px  -38px; }
+.podcast-icons .icon[aria-label="Amazon Music"]     { background-position: -114px  -38px; }
+.podcast-icons .icon[aria-label="Apple Podcasts"]   { background-position: -152px  -38px; }
+
+/* Row 3 - podcasts */
+.podcast-icons .icon[aria-label="Podcast Addict"] { background-position:    0px  -76px; }
+.podcast-icons .icon[aria-label="Overcast"]       { background-position:  -38px  -76px; }
+.podcast-icons .icon[aria-label="Castro"]         { background-position:  -76px  -76px; }
+.podcast-icons .icon[aria-label="Castbox"]        { background-position: -114px  -76px; }
+.podcast-icons .icon[aria-label="Pocket Casts"]   { background-position: -152px  -76px; }
