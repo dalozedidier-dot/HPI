@@ -96,12 +96,12 @@ header.site {
   color: var(--gold-2);
 }
 .brand-mark {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, #fff 0 1.5px, transparent 2px),
-    conic-gradient(from 20deg, var(--gold), var(--mauve-2), #fff, var(--gold));
+  background: url('../favicon-96x96.png') center / cover no-repeat;
+  box-shadow: 0 0 12px rgba(212,188,138,.22);
 }
 .brand small {
   display: block;
@@ -1627,16 +1627,17 @@ header.site .nav { min-height: 72px; }
 .profile-feature { display:grid; grid-template-columns:220px 1fr; gap:34px; align-items:center; max-width:980px; padding:28px; border:1px solid var(--line); border-radius:20px; background:linear-gradient(145deg,#fffdfa,#f6efe6); }
 .profile-feature img { width:220px; aspect-ratio:1/1; object-fit:cover; border-radius:50%; box-shadow:0 0 0 6px var(--paper),0 0 0 7px rgba(151,112,170,.36); }
 
-/* Team: one visual language for all portraits */
-.team-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:32px; }
-.team-card { display:grid; grid-template-columns:180px 1fr; gap:26px; align-items:center; padding:26px; border:1px solid var(--line); border-radius:20px; background:linear-gradient(145deg,#fffdfa,#f6efe6); position:relative; overflow:hidden; }
-.team-card::after { content:''; position:absolute; right:-20px; bottom:-18px; width:180px; height:86px; background:url('../assets/card-lines.svg') center/contain no-repeat; opacity:.28; pointer-events:none; }
-.team-photo { position:relative; padding:8px; }
-.team-photo::before,.team-photo::after { content:''; position:absolute; border:1px solid rgba(151,112,170,.35); border-radius:24px; inset:0 12px 10px 0; transform:rotate(-3deg); }
-.team-photo::after { border-color:rgba(212,188,138,.55); inset:10px 0 0 12px; transform:rotate(3deg); }
-.team-photo img { position:relative; z-index:1; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center top; border-radius:18px; display:block; box-shadow:0 14px 32px rgba(35,25,45,.12); }
-.team-copy h2 { margin:4px 0 12px; font-size:1.8rem; }
-.team-copy ul { margin:0 0 12px; padding-left:18px; color:var(--muted); }
+/* Team: same profile format as the Fabrice reference */
+.team-grid { display:grid; grid-template-columns:1fr; gap:24px; margin-top:32px; }
+.team-card { display:grid; grid-template-columns:230px minmax(0,1fr); gap:32px; align-items:center; min-height:344px; padding:28px; border:1px solid var(--line); border-radius:22px; background:linear-gradient(145deg,#fffdfa,#f6efe6); position:relative; overflow:hidden; }
+.team-card::after { content:''; position:absolute; right:-24px; bottom:-20px; width:220px; height:105px; background:url('../assets/card-lines.svg') center/contain no-repeat; opacity:.28; pointer-events:none; }
+.team-photo { position:relative; width:230px; padding:0; }
+.team-photo::before,.team-photo::after { content:''; position:absolute; border:1px solid rgba(151,112,170,.35); border-radius:22px; inset:-7px 7px 7px -7px; transform:rotate(-2deg); pointer-events:none; }
+.team-photo::after { border-color:rgba(212,188,138,.55); inset:7px -7px -7px 7px; transform:rotate(2deg); }
+.team-photo img { position:relative; z-index:1; display:block; width:230px; height:288px; max-width:none; object-fit:cover; object-position:center top; border-radius:18px; box-shadow:0 0 0 6px #fbf7f0,0 0 0 7px rgba(151,112,170,.35),0 14px 30px rgba(35,25,45,.13); }
+.team-copy { min-width:0; position:relative; z-index:1; }
+.team-copy h2 { margin:5px 0 12px; font-size:2rem; }
+.team-copy ul { margin:0 0 12px; padding-left:18px; color:var(--muted); line-height:1.65; }
 .team-copy li + li { margin-top:5px; }
 .team-copy a { color:var(--plum); text-decoration:underline; text-underline-offset:3px; }
 
@@ -1677,7 +1678,8 @@ header.site .nav { min-height: 72px; }
   .topic-grid,.testimonial-grid { grid-template-columns:1fr; }
   .profile-feature,.team-card,.certified-profile { grid-template-columns:1fr; }
   .profile-feature img { width:min(220px,70vw); margin:auto; }
-  .team-photo { width:min(240px,78vw); margin:auto; }
+  .team-photo { width:min(230px,78vw); margin:auto; }
+  .team-photo img { width:100%; height:auto; aspect-ratio:4/5; max-width:230px; margin:auto; }
   .certified-profile img { width:min(260px,78vw); margin:auto; }
 }
 
