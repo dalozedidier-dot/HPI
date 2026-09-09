@@ -28,12 +28,3 @@ https://www.hpitalents.com/
 ## V12
 
 L'accueil réintègre les blocs publics manquants du site de référence tout en conservant le design V9 : 5 chiffres clés, conférences, livre, réseaux, actualités et certifications.
-
-
-## V32
-- Nouvelle illustration de l'index avec cadre élargi intégré au visuel.
-- Contraste corrigé sur les CTA THPI/TTHPI.
-- MASTER PRO GIFTED uniformisé avec un seul modèle de fiche et portraits décorés.
-- Logo bleu générique supprimé des Actualités.
-- Equipe.zip intégré avec les six portraits et les fonctions.
-- Enrichissement des principales pages encore trop courtes à partir des informations publiques du site officiel.
