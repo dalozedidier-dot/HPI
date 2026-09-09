@@ -8,7 +8,6 @@ if (burger && header) {
   }
   const setMenu = (open) => {
     header.classList.toggle("open", open);
-    document.documentElement.classList.toggle("menu-open", open);
     burger.setAttribute("aria-expanded", String(open));
     burger.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
   };
