@@ -1036,6 +1036,8 @@ header.site .nav { min-height: 72px; }
   border-radius: 16px;
   background: var(--paper);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .book-card .book-cover img { height: 255px; box-shadow: 0 12px 28px rgba(36, 25, 45, .1); }
 .book-card h3 { font-size: 1.2rem; margin: 18px 0 6px; }
@@ -1561,7 +1563,7 @@ header.site .nav { min-height: 72px; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 14px;
+  margin: auto auto 0;
   padding: 9px 15px;
   border: 1px solid rgba(42, 29, 49, .28);
   border-radius: 8px;
