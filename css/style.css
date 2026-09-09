@@ -88,29 +88,17 @@ header.site {
   gap: 20px;
 }
 .brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
   font-family: var(--serif);
   font-size: 1.35rem;
   color: var(--gold-2);
-  line-height: 1;
-  flex-shrink: 0;
-}
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.02;
-  min-width: 0;
 }
 .brand-mark {
   width: 28px;
   height: 28px;
-  flex: 0 0 28px;
   border-radius: 50%;
-  align-self: center;
-  transform: translateY(1px);
   background:
     radial-gradient(circle at 50% 50%, #fff 0 1.5px, transparent 2px),
     conic-gradient(from 20deg, var(--gold), var(--mauve-2), #fff, var(--gold));
@@ -122,7 +110,6 @@ header.site {
   letter-spacing: 0.16em;
   color: rgba(246,241,234,.62);
   text-transform: uppercase;
-  margin-top: 4px;
 }
 .nav-links { display: flex; gap: 22px; align-items: center; }
 .nav-links a { font-size: 0.9rem; color: rgba(246,241,234,.78); }
@@ -1375,35 +1362,32 @@ header.site .nav { min-height: 72px; }
   .reference-logo:nth-last-child(-n+6) { border: 0; min-height: 96px; }
 }
 
-/* V21: mobile/tablet navigation fills the visible viewport and always allows access to the final Contact item. */
-@media (max-width: 1260px) {
-  header.site.open .nav-links {
-    position: fixed;
-    top: 72px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    max-height: none;
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
-    padding: 12px 18px calc(72px + env(safe-area-inset-bottom));
-  }
-  html.menu-open,
-  html.menu-open body {
-    overflow: hidden;
-  }
-}
 
-
-/* V22: restore actual footer icons and stabilize the brand orb. */
+/* V23 consolidation: mobile navigation, real brand orb, footer icons and book links. */
 .social-icons .icon,
 .podcast-icons .icon { font-size: 0; }
-.social-icons .icon svg { width: 18px; height: 18px; }
-.podcast-icons .icon svg { width: 18px; height: 18px; }
+.social-icons .icon svg,
+.podcast-icons .icon svg { width: 18px; height: 18px; display:block; }
 .icon.stroke svg { fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
 .icon.thin svg { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .icon.fill svg { fill: currentColor; stroke: none; }
-.icon.fill-stroke svg { fill: currentColor; stroke: currentColor; stroke-width: .4; stroke-linecap: round; stroke-linejoin: round; }
+.book-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+.book-buy-link { display:inline-block; margin-top:14px; color:var(--plum); font-weight:600; border-bottom:1px solid var(--gold); padding-bottom:2px; }
+@media (max-width:1260px) {
+  header.site.open .nav-links {
+    position:fixed;
+    top:72px;
+    right:0;
+    bottom:0;
+    left:0;
+    max-height:none;
+    height:auto;
+    overflow-x:hidden;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+    padding:12px 18px calc(72px + env(safe-area-inset-bottom));
+  }
+  html.menu-open,
+  html.menu-open body { overflow:hidden; }
+}
