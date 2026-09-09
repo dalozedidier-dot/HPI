@@ -98,18 +98,29 @@ header.site {
 .brand-mark {
   width: 28px;
   height: 28px;
+  flex: 0 0 28px;
+  position: relative;
+  top: 2px;
   border-radius: 50%;
   background:
     radial-gradient(circle at 50% 50%, #fff 0 1.5px, transparent 2px),
     conic-gradient(from 20deg, var(--gold), var(--mauve-2), #fff, var(--gold));
 }
+.brand > span:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
 .brand small {
   display: block;
+  margin-top: 6px;
   font-family: var(--sans);
   font-size: 0.58rem;
   letter-spacing: 0.16em;
   color: rgba(246,241,234,.62);
   text-transform: uppercase;
+  line-height: 1.1;
 }
 .nav-links { display: flex; gap: 22px; align-items: center; }
 .nav-links a { font-size: 0.9rem; color: rgba(246,241,234,.78); }
@@ -1036,8 +1047,6 @@ header.site .nav { min-height: 72px; }
   border-radius: 16px;
   background: var(--paper);
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 .book-card .book-cover img { height: 255px; box-shadow: 0 12px 28px rgba(36, 25, 45, .1); }
 .book-card h3 { font-size: 1.2rem; margin: 18px 0 6px; }
@@ -1563,7 +1572,7 @@ header.site .nav { min-height: 72px; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: auto auto 0;
+  margin-top: 14px;
   padding: 9px 15px;
   border: 1px solid rgba(42, 29, 49, .28);
   border-radius: 8px;
