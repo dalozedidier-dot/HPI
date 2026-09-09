@@ -96,31 +96,20 @@ header.site {
   color: var(--gold-2);
 }
 .brand-mark {
-  width: 28px;
-  height: 28px;
-  flex: 0 0 28px;
-  position: relative;
-  top: 2px;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, #fff 0 1.5px, transparent 2px),
-    conic-gradient(from 20deg, var(--gold), var(--mauve-2), #fff, var(--gold));
-}
-.brand > span:last-child {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1;
+  background: url('../assets/logo-orb-header.png') center center / cover no-repeat;
+  overflow: hidden;
 }
 .brand small {
   display: block;
-  margin-top: 6px;
   font-family: var(--sans);
   font-size: 0.58rem;
   letter-spacing: 0.16em;
   color: rgba(246,241,234,.62);
   text-transform: uppercase;
-  line-height: 1.1;
 }
 .nav-links { display: flex; gap: 22px; align-items: center; }
 .nav-links a { font-size: 0.9rem; color: rgba(246,241,234,.78); }
