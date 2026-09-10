@@ -96,12 +96,12 @@ header.site {
   color: var(--gold-2);
 }
 .brand-mark {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, #fff 0 1.5px, transparent 2px),
-    conic-gradient(from 20deg, var(--gold), var(--mauve-2), #fff, var(--gold));
+  background: url('../assets/logo-orb-header.png') center center / cover no-repeat;
+  overflow: hidden;
 }
 .brand small {
   display: block;
@@ -754,6 +754,31 @@ header.site .nav { min-height: 72px; }
 .social-icons .icon { font-weight:600; font-size:.9rem; }
 .podcast-icons .icon { width:36px; height:36px; font-size:.64rem; font-weight:600; letter-spacing:-.02em; }
 
+/* Footer icons: use the existing validated assets instead of text fallbacks. */
+.social-icons .icon,
+.podcast-icons .icon {
+  font-size: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+.social-icons .icon:hover,
+.podcast-icons .icon:hover { background-color: #353138; }
+.social-icons .icon[aria-label="Facebook"] { background-image: url('../assets/icons/footer/facebook.png'); }
+.social-icons .icon[aria-label="YouTube"] { background-image: url('../assets/icons/footer/youtube.png'); }
+.social-icons .icon[aria-label="LinkedIn"] { background-image: url('../assets/icons/footer/linkedin.png'); }
+.social-icons .icon[aria-label="Instagram"] { background-image: url('../assets/icons/footer/instagram.png'); }
+.social-icons .icon[aria-label="TikTok"] { background-image: url('../assets/icons/footer/tiktok.png'); }
+.podcast-icons .icon[aria-label="Deezer"] { background-image: url('../assets/icons/footer/deezer.png'); }
+.podcast-icons .icon[aria-label="Spotify"] { background-image: url('../assets/icons/footer/spotify.png'); }
+.podcast-icons .icon[aria-label="Amazon Music"] { background-image: url('../assets/icons/footer/amazon-music.png'); }
+.podcast-icons .icon[aria-label="Apple Podcasts"] { background-image: url('../assets/icons/footer/apple-podcasts.png'); }
+.podcast-icons .icon[aria-label="Podcast Addict"] { background-image: url('../assets/icons/footer/podcast-addict.png'); }
+.podcast-icons .icon[aria-label="Overcast"] { background-image: url('../assets/icons/footer/overcast.png'); }
+.podcast-icons .icon[aria-label="Castro"] { background-image: url('../assets/icons/footer/castro.png'); }
+.podcast-icons .icon[aria-label="Castbox"] { background-image: url('../assets/icons/footer/castbox.png'); }
+.podcast-icons .icon[aria-label="Pocket Casts"] { background-image: url('../assets/icons/footer/pocket-casts.png'); }
+
 @media (max-width: 1260px) {
   .nav-links { display:none; }
   .burger { display:block; }
@@ -1036,10 +1061,13 @@ header.site .nav { min-height: 72px; }
   border-radius: 16px;
   background: var(--paper);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .book-card .book-cover img { height: 255px; box-shadow: 0 12px 28px rgba(36, 25, 45, .1); }
 .book-card h3 { font-size: 1.2rem; margin: 18px 0 6px; }
 .book-card p { color: var(--muted); font-size: .86rem; }
+.book-card .book-link { margin-top: auto; align-self: center; }
 .network-banner {
   margin: 0 0 42px;
   overflow: hidden;
