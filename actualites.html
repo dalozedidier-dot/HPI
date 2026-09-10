@@ -62,7 +62,7 @@
 }
 .news-page .news-thumb {
   display: flex !important;
-  align-items: center !important;
+  align-items: flex-start !important;
   justify-content: center !important;
   min-height: 190px !important;
   height: auto !important;
@@ -122,6 +122,45 @@
   color: #fff !important;
   border-bottom-color: #fff !important;
 }
+
+/* Contenu complet des actualités, intégré directement dans chaque bande */
+.news-page .news-list-copy {
+  justify-content: flex-start !important;
+}
+.news-page .news-list-copy p {
+  margin: 0 0 10px !important;
+}
+.news-page .news-list-copy p:last-child,
+.news-page .news-list-copy ul:last-child {
+  margin-bottom: 0 !important;
+}
+.news-page .news-inline-heading {
+  margin: 8px 0 7px !important;
+  color: #efd99d !important;
+  font-family: "Outfit", sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+}
+.news-page .news-inline-list {
+  margin: 2px 0 12px 1.15rem !important;
+  padding: 0 !important;
+  color: rgba(255,255,255,.82) !important;
+  line-height: 1.5 !important;
+}
+.news-page .news-inline-list li {
+  margin: 3px 0 !important;
+}
+.news-page .news-inline-callout {
+  margin-top: 4px !important;
+  padding: 10px 13px !important;
+  border-left: 2px solid #d9bd79 !important;
+  background: rgba(255,255,255,.07) !important;
+  color: #fff !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+.news-page .news-read { display: none !important; }
+
 @media (max-width: 720px) {
   .news-page .news-list-card {
     grid-template-columns: 118px minmax(0, 1fr) !important;
@@ -168,67 +207,67 @@
 <div class="news-list">
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Promotion de Noël 2025 : -20 %" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>3 déc. 2025</time><h2>Promotion de Noël 2025 : -20 %</h2><p>Réduction de 20 % sur cinq formations e-learning du Campus Digital pendant le mois de décembre 2025.</p><a class="news-read" href="actualite-promotion-noel-2025.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>3 déc. 2025</time><h2>Promotion de Noël 2025 : -20 %</h2><p>Pour le mois de décembre 2025, HPI Talents propose une réduction de 20 % sur le prix affiché de cinq formations e-learning au choix du Campus Digital.</p><h3 class="news-inline-heading">Une offre dédiée aux formations en ligne</h3><p>Cette promotion concerne les parcours accessibles à distance, conçus pour permettre aux adultes HPI, THPI et aux professionnels de progresser à leur rythme.</p><p class="news-inline-callout">Période : du 3 au 31 décembre 2025.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Podcast TERRATYPIQUE" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>28 nov. 2025</time><h2>Podcast TERRATYPIQUE</h2><p>Fabrice Micheau échange autour du HPI, du TSA, du TDAH et des DYS : comprendre les singularités avant d'accompagner.</p><a class="news-read" href="actualite-podcast-terratypique.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>28 nov. 2025</time><h2>Podcast TERRATYPIQUE</h2><p>Fabrice Micheau est invité dans un Big Talk consacré aux profils HPI, TSA, TDAH et DYS. L’échange revient sur un principe central : comprendre les mécanismes avant de vouloir accompagner.</p><h3 class="news-inline-heading">Comprendre les singularités sans les réduire à une étiquette</h3><p>La discussion aborde notamment les mécanismes d’adaptation, les traumas, les souffrances peu visibles et les forces parfois mal comprises des personnes neuroatypiques. L’objectif est d’éviter les maladresses et de soutenir des fonctionnements réellement singuliers.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Replay PING PONG Live 60' : je réponds à toutes vos questions" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>16 nov. 2025</time><h2>Replay PING PONG Live 60' : je réponds à toutes vos questions</h2><p>Une heure de réponses en direct autour du HPI, de la multi-exceptionnalité et des situations concrètes du public.</p><a class="news-read" href="actualite-ping-pong-live-16-novembre-2025.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>16 nov. 2025</time><h2>Replay PING PONG Live 60' : je réponds à toutes vos questions</h2><p>Le 16 novembre 2025, Fabrice Micheau a proposé une nouvelle édition de PING PONG Live, 60', un format dans lequel les questions arrivent directement dans le chat et sont traitées en temps réel.</p><h3 class="news-inline-heading">Une heure de questions-réponses orientées solutions</h3><p>Le principe est volontairement simple : pas de conférence figée, mais un échange vivant autour de la douance, de la multi-exceptionnalité, du décalage et des situations concrètes rencontrées par les adultes atypiques.</p><p>Le format est limité à 60 minutes. Les replays sont ensuite proposés gratuitement sur la chaîne YouTube de Fabrice Micheau.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Nouveau programme pour les professionnels" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>28 oct. 2025</time><h2>Nouveau programme pour les professionnels</h2><p>Un parcours professionnel de 59 heures en format hybride, avec ressources XXL, lives, replays et journées Zoom.</p><a class="news-read" href="actualite-pack-pro-coaching-hpi.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>28 oct. 2025</time><h2>Nouveau programme pour les professionnels</h2><p>Un nouveau parcours rejoint le catalogue destiné aux professionnels : le Pack PRO Coaching HPI et Orientation Solutions.</p><h3 class="news-inline-heading">59 heures de formation en format hybride</h3><ul class="news-inline-list"><li>4 journées intensives en Zoom</li><li>4 programmes XXL en e-learning</li><li>plus de 1 200 slides</li><li>des centaines de documents et ressources pédagogiques</li><li>des soirées live avec accès aux replays</li><li>un programme e-learning complémentaire offert</li></ul><h3 class="news-inline-heading">Les parcours du pack</h3><p>Le programme articule communication orientée solutions, accompagnement des adultes surdoués et approfondissement professionnel. Il est pensé pour fournir des repères, des outils et une pratique directement mobilisable dans l’accompagnement.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Ni folle, ni conne : la douance au féminin en e-learning" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>8 oct. 2025</time><h2>Ni folle, ni conne : la douance au féminin en e-learning</h2><p>Vidéos, podcasts, présentations, transcriptions et replays pour explorer les spécificités de la douance au féminin.</p><a class="news-read" href="actualite-douance-au-feminin-elearning.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>8 oct. 2025</time><h2>Ni folle, ni conne : la douance au féminin en e-learning</h2><p>La formation La douance au féminin est proposée en e-learning avec vidéos, podcasts, présentations, transcriptions et deux soirées live disponibles en replay.</p><h3 class="news-inline-heading">Pour qui ?</h3><p>Le parcours s’adresse aux adultes HPI ou atypiques, testés ou non, qui souhaitent mieux comprendre les expériences propres aux femmes surdouées, décalées ou longtemps invisibilisées.</p><h3 class="news-inline-heading">Parmi les thèmes abordés</h3><ul class="news-inline-list"><li>caractéristiques du HPI au féminin</li><li>détection et effets des tests</li><li>vie professionnelle et management</li><li>faux self et syndrome de l’imposteur</li><li>vie sociale et familiale</li><li>développement du potentiel en sécurité</li></ul></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Octopop Pro : le podcast des atypiques en liberté" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>5 oct. 2025</time><h2>Octopop Pro : le podcast des atypiques en liberté</h2><p>Fabrice Micheau est reçu par Annabel Gragui-Morad et Audrey Hernandez pour parler atypies et parcours singuliers.</p><a class="news-read" href="actualite-octopop-pro-fabrice-micheau.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>5 oct. 2025</time><h2>Octopop Pro : le podcast des atypiques en liberté</h2><p>Dans cet épisode d’Octopop Pro - Les Atypiques en liberté, Annabel Gragui-Morad et Audrey Hernandez reçoivent Fabrice Micheau.</p><p>L’échange revient sur son propre parcours, ses atypies et son travail de longue date autour de la reconnaissance des profils HPI, THPI et multi-exceptionnels. Le format laisse une large place à l’expérience et aux questions concrètes qui se posent lorsqu’on sort des cases habituelles.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Groupes Coloriés : Suiss'Tour 2025" decoding="async" loading="lazy" src="assets/network/colories-banniere.jpg"/></div>
-<div class="news-list-copy"><time>1 oct. 2025</time><h2>Groupes Coloriés : Suiss'Tour 2025</h2><p>Genève, Sion et Gruyère : trois rencontres autour de la multi-exceptionnalité HPI, TSA, TDAH et DYS.</p><a class="news-read" href="actualite-colories-suiss-tour-2025.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>1 oct. 2025</time><h2>Groupes Coloriés : Suiss'Tour 2025</h2><p>Le réseau international des Coloriés organise plusieurs rencontres en Suisse autour du thème « Multi-exceptionnalité : le grand bazar », consacré aux croisements entre HPI, TSA, TDAH, DYS et autres singularités.</p><h3 class="news-inline-heading">Dates annoncées</h3><ul class="news-inline-list"><li>Genève : 10 octobre 2025</li><li>Sion : 14 octobre 2025</li><li>Gruyère : 17 octobre 2025</li></ul><p>Ces rencontres s’inscrivent dans la dynamique du réseau Coloriés, présent dans plus de 20 pays et composé de groupes et correspondants locaux.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Témoignages autour de « C'est décidé, je change ma vie »" decoding="async" loading="lazy" src="assets/books/cest-decide-je-change-ma-vie.png"/></div>
-<div class="news-list-copy"><time>18 sept. 2025</time><h2>Témoignages autour de « C'est décidé, je change ma vie »</h2><p>Des retours de lecteurs autour du livre C'est décidé, je change ma vie et de ses 52 clés concrètes.</p><a class="news-read" href="actualite-temoignages-instagram-livre.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>18 sept. 2025</time><h2>Témoignages autour de « C'est décidé, je change ma vie »</h2><p>Des témoignages partagés sur Instagram reviennent sur le livre C’est décidé, je change ma vie, écrit par Élodie Crépel et Fabrice Micheau.</p><h3 class="news-inline-heading">52 clés pour avancer concrètement</h3><p>Le livre propose un parcours progressif pour mieux se comprendre, s’affirmer et reprendre sa place. Les exercices s’appuient notamment sur des objectifs concrets et une progression organisée en quatre saisons.</p><p>Préfacé par Catherine Testa, l’ouvrage cherche à relier prise de conscience et mise en action sans transformer le changement personnel en injonction.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Groupes Coloriés : rencontre à Paris" decoding="async" loading="lazy" src="assets/network/colories-banniere.jpg"/></div>
-<div class="news-list-copy"><time>2 sept. 2025</time><h2>Groupes Coloriés : rencontre à Paris</h2><p>Une rencontre à Paris autour de la conférence « Multi-exceptionnalité : le grand bazar ».</p><a class="news-read" href="actualite-colories-paris-2025.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>2 sept. 2025</time><h2>Groupes Coloriés : rencontre à Paris</h2><p>Les Groupes Coloriés annoncent une nouvelle apparition à Paris autour de la conférence « Multi-exceptionnalité : le grand bazar ».</p><p>Le thème explore les situations dans lesquelles plusieurs singularités se rencontrent : HPI ou THPI, TSA, TDAH, DYS, hypersensibilités et parcours complexes. L’enjeu est d’éviter les lectures trop simples et de mieux comprendre les interactions entre ces dimensions.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Formation e-learning : Orientation Solutions et Compétences" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>27 juin 2025</time><h2>Formation e-learning : Orientation Solutions et Compétences</h2><p>Une approche pragmatique centrée sur les solutions et les compétences, proposée en e-learning et en format hybride.</p><a class="news-read" href="actualite-formation-osc-elearning.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>27 juin 2025</time><h2>Formation e-learning : Orientation Solutions et Compétences</h2><p>HPI Talents développe ses formations e-learning autour de l’Orientation Solutions et Compétences (OSC), une approche pragmatique qui cherche à partir des ressources disponibles et des solutions mobilisables.</p><h3 class="news-inline-heading">Des formats pour différents usages</h3><p>Les parcours concernent aussi bien la communication pour le grand public que l’accompagnement professionnel. Certains programmes sont proposés en format hybride, associant travail en ligne et journées en Zoom.</p><p>L’objectif est de fournir des outils directement utilisables pour clarifier une situation, faire émerger les compétences et soutenir une mise en mouvement réaliste.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Et si on repensait la douance au-delà du QI ?" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>27 juin 2025</time><h2>Et si on repensait la douance au-delà du QI ?</h2><p>Repenser la douance au-delà du seul score de QI : décalage, hypersensibilité, corps et fonctionnement atypique.</p><a class="news-read" href="actualite-douance-au-dela-du-qi.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>27 juin 2025</time><h2>Et si on repensait la douance au-delà du QI ?</h2><p>Dans le podcast Diversino, Fabrice Micheau revient sur une question centrale : peut-on comprendre la douance en la réduisant à un chiffre de QI ?</p><h3 class="news-inline-heading">Dépasser la seule mesure</h3><p>L’épisode aborde le sentiment de décalage, la naïveté de certains profils qui pensent spontanément en termes d’évolution et d’aide, ainsi que la place du corps, des émotions et de l’intuition dans l’expérience vécue.</p><p>La discussion distingue la performance psychométrique d’un fonctionnement plus global et questionne les conséquences concrètes de cette différence dans les organisations, les relations et le rapport à soi.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Pourquoi les neuroatypiques deviennent-ils plus intransigeants ?" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>25 avril 2025</time><h2>Pourquoi les neuroatypiques deviennent-ils plus intransigeants ?</h2><p>Quand la suradaptation atteint ses limites : cohérence, besoins, énergie et évolution des profils HPI avec le temps.</p><a class="news-read" href="actualite-neuroatypiques-intransigeants.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>25 avril 2025</time><h2>Pourquoi les neuroatypiques deviennent-ils plus intransigeants ?</h2><p>Après des années passées à s’adapter, se lisser ou supporter des environnements peu compatibles avec leur fonctionnement, certains adultes neuroatypiques deviennent plus exigeants avec le temps.</p><h3 class="news-inline-heading">Quand la suradaptation atteint ses limites</h3><p>Ce changement peut être perçu comme de l’intransigeance. Il peut aussi traduire une meilleure capacité à identifier ses limites, à refuser certaines incohérences et à préserver son énergie.</p><p>La question se pose particulièrement pour les seniors HPI, encore peu visibles dans les dispositifs d’accompagnement. Vieillir avec un fonctionnement atypique implique parfois de revoir les stratégies construites pendant des décennies.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="C'est décidé, je change ma vie" loading="lazy" src="assets/books/cest-decide-je-change-ma-vie.png"/></div>
-<div class="news-list-copy"><time>21 avril 2025</time><h2>C'est décidé, je change ma vie</h2><p>Des témoignages sur les limites, les relations, l'énergie et la décision de changer ce qui ne convient plus.</p><a class="news-read" href="actualite-cest-decide-je-change-ma-vie.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>21 avril 2025</time><h2>C'est décidé, je change ma vie</h2><p>Cette actualité rassemble des témoignages autour d’un thème simple à formuler mais souvent difficile à vivre : décider de changer ce qui ne convient plus.</p><p>Les échanges évoquent la capacité à reconnaître ses limites, à s’éloigner de relations qui épuisent, à récupérer de l’énergie et à remettre de la cohérence dans son quotidien.</p><p>Cette démarche rejoint le travail proposé dans le livre écrit à quatre mains par Élodie Crépel et Fabrice Micheau, construit autour de 52 clés concrètes pour s’affirmer et prendre sa place.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="130 de QI ne fait pas de nous un surdoué atypique" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>10 avril 2025</time><h2>130 de QI ne fait pas de nous un surdoué atypique</h2><p>Un score de QI ne suffit pas à décrire un fonctionnement HPI atypique : intensité, divergence et hypersensibilités.</p><a class="news-read" href="actualite-130-qi-hpi-atypique.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>10 avril 2025</time><h2>130 de QI ne fait pas de nous un surdoué atypique</h2><p>Un score élevé à un test de QI et un fonctionnement HPI atypique ne décrivent pas exactement la même chose.</p><h3 class="news-inline-heading">HQI et HPI : deux niveaux de lecture</h3><p>Le HQI renvoie à une mesure psychométrique. Le seuil de 130 correspond classiquement aux résultats situés dans la partie supérieure de la distribution.</p><p>Le HPI atypique, dans l’approche défendue par HPI Talents, renvoie davantage à un fonctionnement global : intensité, hypersensibilités, pensée divergente, besoin de cohérence et sentiment de décalage.</p><p class="news-inline-callout">Tous les HQI ne vivent pas nécessairement un décalage atypique. Et un fonctionnement singulier ne se résume pas à un seul chiffre.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="PING PONG Live 60' : une aventure HPI atypique" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>12 mars 2025</time><h2>PING PONG Live 60' : une aventure HPI atypique</h2><p>PING PONG Live 60' : des questions du public et des réponses en direct orientées solutions.</p><a class="news-read" href="actualite-ping-pong-live-mars-2025.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>12 mars 2025</time><h2>PING PONG Live 60' : une aventure HPI atypique</h2><p>PING PONG Live, 60' est un format construit autour des questions du public. Les sujets arrivent en direct et Fabrice Micheau y répond dans la limite d’une heure.</p><p>Le dispositif privilégie des réponses concrètes et une logique d’orientation vers les solutions plutôt qu’une conférence descendante préparée à l’avance.</p><p>Les thèmes peuvent toucher au HPI, au THPI, à la multi-exceptionnalité, aux relations, au travail ou aux difficultés de compréhension de son propre fonctionnement.</p></div>
 </article>
 <article class="news-list-card">
 <div class="news-thumb"><img alt="Parole d'HPI : un regard qui questionne, un monde à décoder" decoding="async" loading="lazy" src="assets/conferences/logo-hpi-talents.webp"/></div>
-<div class="news-list-copy"><time>14 févr. 2025</time><h2>Parole d'HPI : un regard qui questionne, un monde à décoder</h2><p>Des paroles sur le doute, la sensibilité, la lucidité et le besoin de décoder un monde parfois difficile à comprendre.</p><a class="news-read" href="actualite-parole-hpi.html">Lire l’actualité</a></div>
+<div class="news-list-copy"><time>14 févr. 2025</time><h2>Parole d'HPI : un regard qui questionne, un monde à décoder</h2><p>Cette série de paroles donne une place au vécu intérieur de personnes HPI : le regard qui questionne, la sensation de devoir décoder ce que d’autres trouvent évident, les doutes et la quête de sens.</p><h3 class="news-inline-heading">Mettre des mots sur le décalage</h3><p>La lucidité et la sensibilité peuvent être vécues comme des ressources, mais aussi comme une source de fatigue lorsqu’elles s’accompagnent d’une remise en question permanente ou d’une difficulté à se reconnaître dans les normes environnantes.</p><p>Nommer ces expériences permet de sortir d’une lecture uniquement centrée sur la performance et de mieux comprendre la dimension vécue de la douance atypique.</p></div>
 </article>
 </div>
 </section>
