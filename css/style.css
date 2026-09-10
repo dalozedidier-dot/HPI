@@ -1665,3 +1665,6 @@ header.site .nav { min-height: 72px; }
     aspect-ratio: 250 / 310;
   }
 }
+
+/* Targeted fix: icon for the YouTube Podcasts entry injected by js/main.js. */
+.podcast-icons .icon[aria-label="YouTube Podcasts"] { background-image: url('../assets/icons/footer/youtube-podcast.png'); }
