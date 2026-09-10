@@ -1668,3 +1668,6 @@ header.site .nav { min-height: 72px; }
 
 /* Targeted fix: icon for the YouTube Podcasts entry injected by js/main.js. */
 .podcast-icons .icon[aria-label="YouTube Podcasts"] { background-image: url('../assets/icons/footer/youtube-podcast.png'); }
+
+/* Targeted fix: use the same gold PNG icon system for social networks and podcasts. */
+.social-icons .brand-icon { display: none; }
