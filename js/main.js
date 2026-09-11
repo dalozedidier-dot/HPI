@@ -98,7 +98,25 @@ if (brain) {
   updateBrainVisibility();
 }
 
+// Ensure the "Témoignages" entry is present in the Bilan dropdown on every page.
+document.querySelectorAll('.nav-group > .nav-top[href="bilan.html"]').forEach((bilanTop) => {
+  const group = bilanTop.parentElement;
+  const dropdown = group?.querySelector(".dropdown");
+  if (!dropdown) return;
 
+  let link = dropdown.querySelector('a[href="temoignages.html"]');
+  if (!link) {
+    link = document.createElement("a");
+    link.href = "temoignages.html";
+    link.textContent = "Témoignages";
+    dropdown.appendChild(link);
+  }
+
+  if (window.location.pathname.endsWith("/temoignages.html") || window.location.pathname.endsWith("temoignages.html")) {
+    link.classList.add("active-sub");
+    group.classList.add("nav-current");
+  }
+});
 
 // Ensure the podcast footer contains the YouTube entry shown on the original site.
 document.querySelectorAll(".podcast-icons").forEach((row) => {
@@ -113,8 +131,6 @@ document.querySelectorAll(".podcast-icons").forEach((row) => {
 });
 
 // Footer social networks: replace placeholder letters with real brand icons.
-// The icons inherit the current HPI Talents gold from CSS, so the footer stays
-// consistent with the site's active palette.
 const footerBrandIcons = {
   Facebook: {
     viewBox: "0 0 320 512",
@@ -122,7 +138,7 @@ const footerBrandIcons = {
   },
   YouTube: {
     viewBox: "0 0 576 512",
-    path: "M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+    path: "M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
   },
   LinkedIn: {
     viewBox: "0 0 448 512",
